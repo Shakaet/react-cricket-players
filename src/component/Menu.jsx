@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import Blogs from './Blogs';
 import Selected from './Selected';
 
 const Menu = ({handleAvailableBtn,handleSelectedBtn,toggle,toggle2}) => {
+
+
+
+
     return (
         <div>
 
