@@ -4,6 +4,7 @@ import './App.css'
 import Banner from './component/Banner'
 import Nav from './component/nav'
 import Menu from './component/menu'
+import Footer from './component/footer'
 
 function App() {
 
@@ -62,6 +63,7 @@ function App() {
      <Nav coin={coin}></Nav>
      <Banner handleCoin={handleCoin}></Banner>
      <Menu handleAvailableBtn={handleAvailableBtn}handleSelectedBtn={handleSelectedBtn}toggle={toggle}handleChoosePlayer={handleChoosePlayer}takaData={takaData}></Menu>
+     <Footer></Footer>
 
      </div>
       
