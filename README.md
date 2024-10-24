@@ -9,7 +9,7 @@ The Cricket Player Auction App is a dynamic web application that provides a plat
 # Technologies used
 
 1. React.js: To build a highly interactive UI.
-2. Tailwind CSS: For easy and responsive styling.
+2. Tailwind CSS: For easy and beautiful styling.
 3. React Toastify: To provide smooth, non-intrusive notifications.
 4. JavaScript (ES6+): To handle the logic and player interactions.
 
