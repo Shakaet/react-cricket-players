@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Blogs from './Blogs';
 import Selected from './Selected';
 
-const Menu = ({handleAvailableBtn,handleSelectedBtn,toggle,toggle2,handleChoosePlayer,takaData,handleAddMoreBtn,handleDelete}) => {
+const Menu = ({handleAvailableBtn,handleSelectedBtn,toggle,handleChoosePlayer,takaData,handleAddMoreBtn,handleDelete}) => {
 
 
 
