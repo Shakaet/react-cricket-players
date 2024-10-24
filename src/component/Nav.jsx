@@ -2,6 +2,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import picture from "../assets/logo.png"
+import { FaCoins } from "react-icons/fa6";
+
+
 
 const Nav = ({coin}) => {
     return (
@@ -16,7 +19,7 @@ const Nav = ({coin}) => {
                     <li><a className='text-[#131313B3] font-bold'>Fixture</a></li>
                     <li><a className='text-[#131313B3] font-bold'>Terms</a></li>
                     <li><a className='text-[#131313B3] font-bold'>Schedules</a></li>
-                    <button className="btn btn-outline font-bold">{coin} Coin</button>
+                    <button className="btn btn-outline font-bold">{coin} Coin <FaCoins style={{color:"green"}}></FaCoins></button>
 
                     
                     </ul>

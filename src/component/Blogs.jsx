@@ -17,9 +17,9 @@ const Blogs = ({handleChoosePlayer}) => {
     return (
         <div>
 
-            <h1>Hello Blogs</h1>
+           <h1 className='text-3xl text-[#131313] font-bold'>Available Players</h1>
 
-            <div className='grid md:grid-cols-3 justify-center'>
+            <div className='grid grid-cols-2 gap-5 md:grid-cols-3 justify-center mt-5'>
             {
                 data.map(item=><Blog data={item} handleChoosePlayer={handleChoosePlayer}></Blog>)
             }

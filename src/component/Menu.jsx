@@ -13,7 +13,7 @@ const Menu = ({handleAvailableBtn,handleSelectedBtn,toggle,toggle2,handleChooseP
 
             <div className='flex justify-between mt-10'>
                 <div>
-                    <h1 className='text-3xl text-[#131313] font-bold'>Available Players</h1>
+                    
                 </div>
 
                 <div className='flex gap-1'>
