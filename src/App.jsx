@@ -14,7 +14,7 @@ function App() {
 
   let handleChoosePlayer=(data)=>{
 
-    if(coin>=data.biddingPrice){
+    if(coin>=data.biddingPrice && takaData.length<6){
 
       coin= coin-data.biddingPrice
       setCoin(coin)

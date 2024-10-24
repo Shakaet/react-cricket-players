@@ -18,7 +18,7 @@ const Menu = ({handleAvailableBtn,handleSelectedBtn,toggle,toggle2,handleChooseP
 
                 <div className='flex gap-1'>
                 <button onClick={()=>handleAvailableBtn()} className="btn btn-outline bg-warning text-black">Available</button>
-                <button onClick={()=>handleSelectedBtn()} className="btn btn-outline bg-warning text-black">Selected {takaData.length}</button>
+                <button onClick={()=>handleSelectedBtn()} className="btn btn-outline bg-warning text-black">Selected ({takaData.length})</button>
                 </div>
             </div>
 

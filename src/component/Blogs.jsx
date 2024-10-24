@@ -19,7 +19,7 @@ const Blogs = ({handleChoosePlayer}) => {
 
             <h1>Hello Blogs</h1>
 
-            <div className='grid md:grid-cols-3'>
+            <div className='grid md:grid-cols-3 justify-center'>
             {
                 data.map(item=><Blog data={item} handleChoosePlayer={handleChoosePlayer}></Blog>)
             }
