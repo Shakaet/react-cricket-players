@@ -1,6 +1,6 @@
 # Name of the Project
 
-Cricket Player Auction Website
+Cricket Player Auction App
 
 # A brief description
 
