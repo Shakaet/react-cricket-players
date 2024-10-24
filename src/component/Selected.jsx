@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { MdDelete } from "react-icons/md";
 import Blogs from './Blogs';
 
-const Selected = ({takaData,handleAddMoreBtn,toggle}) => {
+const Selected = ({takaData,handleAddMoreBtn,toggle,handleDelete}) => {
 
     
 
@@ -33,6 +33,7 @@ const Selected = ({takaData,handleAddMoreBtn,toggle}) => {
 
                                 <h3 className='font-bold'>{item.name}</h3>
                                 <p className='font-bold'>{item.role}</p>
+                                <p className='font-bold'>Price: {item.biddingPrice}</p>
 
                                 </div>
 
@@ -42,7 +43,7 @@ const Selected = ({takaData,handleAddMoreBtn,toggle}) => {
 
                             <div>
 
-                            <button className='text-3xl'><MdDelete /></button>
+                            <button onClick={()=>handleDelete(item.playerId)} className='text-3xl'><MdDelete /></button>
 
                             </div>
                         </div>

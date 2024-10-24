@@ -13,9 +13,19 @@ function App() {
   let[takaData,settakeData]=useState([])
 
 
+  let handleDelete=(playerId)=>{
+    let withoutDelete= takaData.filter(item=>item.playerId !== playerId)
+    
+    settakeData(withoutDelete)
+  }
+
+
   let handleChoosePlayer=(data)=>{
 
-    if(coin>=data.biddingPrice && takaData.length<6){
+
+    let repeat= takaData.find(item=>item.playerId=== data.playerId)
+
+    if(coin>=data.biddingPrice && takaData.length<6 && !repeat){
 
       coin= coin-data.biddingPrice
       setCoin(coin)
@@ -23,7 +33,7 @@ function App() {
       settakeData(newArr)
     }
     else{
-      alert("you have no sufficient money")
+      alert("you can not add players")
     }
 
   }
@@ -66,7 +76,7 @@ function App() {
      <div className='max-w-full mx-auto'>
      <Nav coin={coin}></Nav>
      <Banner handleCoin={handleCoin}></Banner>
-     <Menu handleAvailableBtn={handleAvailableBtn}handleSelectedBtn={handleSelectedBtn}toggle={toggle}handleChoosePlayer={handleChoosePlayer}takaData={takaData} handleAddMoreBtn={handleAddMoreBtn}></Menu>
+     <Menu handleAvailableBtn={handleAvailableBtn}handleSelectedBtn={handleSelectedBtn}toggle={toggle}handleChoosePlayer={handleChoosePlayer}takaData={takaData} handleAddMoreBtn={handleAddMoreBtn} handleDelete={handleDelete}></Menu>
      <Footer></Footer>
 
      </div>

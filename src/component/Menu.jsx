@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Blogs from './Blogs';
 import Selected from './Selected';
 
-const Menu = ({handleAvailableBtn,handleSelectedBtn,toggle,toggle2,handleChoosePlayer,takaData,handleAddMoreBtn}) => {
+const Menu = ({handleAvailableBtn,handleSelectedBtn,toggle,toggle2,handleChoosePlayer,takaData,handleAddMoreBtn,handleDelete}) => {
 
 
 
@@ -26,7 +26,7 @@ const Menu = ({handleAvailableBtn,handleSelectedBtn,toggle,toggle2,handleChooseP
                 toggle=== true && <Blogs handleChoosePlayer={handleChoosePlayer}></Blogs>
             }
             {
-                toggle=== false && <Selected takaData={takaData} handleAddMoreBtn={handleAddMoreBtn} toggle={toggle}></Selected>
+                toggle=== false && <Selected takaData={takaData} handleAddMoreBtn={handleAddMoreBtn} toggle={toggle} handleDelete={handleDelete}></Selected>
             }
             
             
