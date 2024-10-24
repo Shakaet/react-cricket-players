@@ -17,8 +17,8 @@ const Menu = ({handleAvailableBtn,handleSelectedBtn,toggle,toggle2,handleChooseP
                 </div>
 
                 <div className='flex gap-1'>
-                <button onClick={()=>handleAvailableBtn()} className="btn btn-outline bg-warning text-black">Available</button>
-                <button onClick={()=>handleSelectedBtn()} className="btn btn-outline bg-warning text-black">Selected ({takaData.length})</button>
+                <button onClick={() => handleAvailableBtn()} className={`btn ${toggle ? "bg-warning" : ""}`}>Available</button>
+                <button onClick={()=>handleSelectedBtn()} className={`btn ${!toggle ? "bg-warning" : ""}`}>Selected ({takaData.length})</button>
                 </div>
             </div>
 
