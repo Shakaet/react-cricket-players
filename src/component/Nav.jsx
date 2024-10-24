@@ -1,0 +1,34 @@
+
+import React from 'react';
+import PropTypes from 'prop-types';
+import picture from "../assets/logo.png"
+
+const Nav = ({coin}) => {
+    return (
+        <div>
+            <div className="navbar bg-base-100">
+                <div className="flex-1">
+                    <img src={picture}></img>
+                </div>
+                <div className="flex-none">
+                    <ul className="menu menu-horizontal px-1 items-center">
+                    <li><a className='text-[#131313B3] font-bold'>Home</a></li>
+                    <li><a className='text-[#131313B3] font-bold'>Fixture</a></li>
+                    <li><a className='text-[#131313B3] font-bold'>Terms</a></li>
+                    <li><a className='text-[#131313B3] font-bold'>Schedules</a></li>
+                    <button className="btn btn-outline font-bold">{coin} Coin</button>
+
+                    
+                    </ul>
+                </div>
+                </div>
+            
+        </div>
+    );
+};
+
+Nav.propTypes = {
+    
+};
+
+export default Nav;
