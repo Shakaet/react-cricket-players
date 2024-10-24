@@ -1,7 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Blogs from './Blogs';
+import Selected from './Selected';
 
-const Menu = props => {
+const Menu = ({handleAvailableBtn,handleSelectedBtn,toggle,toggle2}) => {
     return (
         <div>
 
@@ -11,10 +13,18 @@ const Menu = props => {
                 </div>
 
                 <div className='flex gap-1'>
-                <button className="btn btn-outline bg-warning text-black">Available</button>
-                <button className="btn btn-outline bg-warning text-black">Selected</button>
+                <button onClick={()=>handleAvailableBtn()} className="btn btn-outline bg-warning text-black">Available</button>
+                <button onClick={()=>handleSelectedBtn()} className="btn btn-outline bg-warning text-black">Selected</button>
                 </div>
             </div>
+
+            {
+                toggle=== true && <Blogs></Blogs>
+            }
+            {
+                toggle=== false && <Selected></Selected>
+            }
+            
             
         </div>
     );

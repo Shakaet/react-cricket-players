@@ -8,6 +8,24 @@ import Menu from './component/menu'
 function App() {
 
   let [coin,setCoin]=  useState(0)
+  let[toggle,setToggle]=useState(true)
+  
+
+
+  let handleAvailableBtn=()=>{
+
+    setToggle(true)
+
+
+
+  }
+  let handleSelectedBtn=()=>{
+    
+    setToggle(false)
+
+
+
+  }
 
 
 
@@ -26,7 +44,7 @@ function App() {
      <div className='max-w-full mx-auto'>
      <Nav coin={coin}></Nav>
      <Banner handleCoin={handleCoin}></Banner>
-     <Menu></Menu>
+     <Menu handleAvailableBtn={handleAvailableBtn}handleSelectedBtn={handleSelectedBtn}toggle={toggle}></Menu>
 
      </div>
       
