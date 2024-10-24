@@ -13,7 +13,7 @@ The Cricket Player Auction App is a dynamic web application that provides a plat
 3. React Toastify: To provide smooth, non-intrusive notifications.
 4. JavaScript (ES6+): To handle the logic and player interactions.
 
-# 3 key features of your project.
+# 3 key features of my project.
 
 1. Add/Remove Players: Users can add players to their selected list based on available funds and remove them as needed.
 
