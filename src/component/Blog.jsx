@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Blog = ({data}) => {
+const Blog = ({data,handleChoosePlayer}) => {
 
 
 
@@ -68,7 +68,7 @@ const Blog = ({data}) => {
           <p className="text-gray-600 font-semibold">
             Price: <span className="text-black font-bold">{biddingPrice}</span>
           </p>
-          <button className="btn btn-outline">Choose Player</button>
+          <button onClick={()=>handleChoosePlayer(data)} className="btn btn-outline">Choose Player</button>
         </div>
       </div>
     </div>

@@ -9,6 +9,23 @@ function App() {
 
   let [coin,setCoin]=  useState(0)
   let[toggle,setToggle]=useState(true)
+  let[takaData,settakeData]=useState([])
+
+
+  let handleChoosePlayer=(data)=>{
+
+    if(coin>=data.biddingPrice){
+
+      coin= coin-data.biddingPrice
+      setCoin(coin)
+      let newArr=[...takaData,data]
+      settakeData(newArr)
+    }
+    else{
+      alert("you have no sufficient money")
+    }
+
+  }
   
 
 
@@ -44,7 +61,7 @@ function App() {
      <div className='max-w-full mx-auto'>
      <Nav coin={coin}></Nav>
      <Banner handleCoin={handleCoin}></Banner>
-     <Menu handleAvailableBtn={handleAvailableBtn}handleSelectedBtn={handleSelectedBtn}toggle={toggle}></Menu>
+     <Menu handleAvailableBtn={handleAvailableBtn}handleSelectedBtn={handleSelectedBtn}toggle={toggle}handleChoosePlayer={handleChoosePlayer}takaData={takaData}></Menu>
 
      </div>
       

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Blogs from './Blogs';
 import Selected from './Selected';
 
-const Menu = ({handleAvailableBtn,handleSelectedBtn,toggle,toggle2}) => {
+const Menu = ({handleAvailableBtn,handleSelectedBtn,toggle,toggle2,handleChoosePlayer,takaData}) => {
 
 
 
@@ -18,15 +18,15 @@ const Menu = ({handleAvailableBtn,handleSelectedBtn,toggle,toggle2}) => {
 
                 <div className='flex gap-1'>
                 <button onClick={()=>handleAvailableBtn()} className="btn btn-outline bg-warning text-black">Available</button>
-                <button onClick={()=>handleSelectedBtn()} className="btn btn-outline bg-warning text-black">Selected</button>
+                <button onClick={()=>handleSelectedBtn()} className="btn btn-outline bg-warning text-black">Selected {takaData.length}</button>
                 </div>
             </div>
 
             {
-                toggle=== true && <Blogs></Blogs>
+                toggle=== true && <Blogs handleChoosePlayer={handleChoosePlayer}></Blogs>
             }
             {
-                toggle=== false && <Selected></Selected>
+                toggle=== false && <Selected takaData={takaData}></Selected>
             }
             
             

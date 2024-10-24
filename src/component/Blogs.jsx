@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import Blog from './Blog';
 
-const Blogs = props => {
+const Blogs = ({handleChoosePlayer}) => {
 
     let [data,setData]=useState([])
 
@@ -21,7 +21,7 @@ const Blogs = props => {
 
             <div className='grid md:grid-cols-3'>
             {
-                data.map(item=><Blog data={item}></Blog>)
+                data.map(item=><Blog data={item} handleChoosePlayer={handleChoosePlayer}></Blog>)
             }
             </div>
             
