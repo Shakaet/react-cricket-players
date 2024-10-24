@@ -9,12 +9,12 @@ const Blog = ({data,handleChoosePlayer}) => {
     return (
         <div>
 
-<div className="bg-white shadow-md rounded-lg overflow-hidden max-w-xs my-5">
+<div className="bg-white shadow-md rounded-lg overflow-hidden max-w-xs my-5 py-2 px-2">
       {/* Player Image */}
-      <img
+      <img 
         src={image}
         alt="Virat Kohli"
-        className="w-full h-48 object-cover"
+        className="w-full h-48 object-cover rounded-lg"
       />
 
       {/* Player Details */}
@@ -57,14 +57,14 @@ const Blog = ({data,handleChoosePlayer}) => {
         {/* Rating and Batting Style */}
         <div className="mt-4 border-t-2">
           <p className="text-gray-600 font-semibold">Rating</p>
-          <div className="flex justify-between items-center mt-1">
-            <span className="text-gray-800 font-bold">{battingType}</span>
-            <span className="text-gray-600">{bowlingType}</span>
+          <div className="md:flex justify-between items-center mt-1 gap-3">
+            <p className="text-gray-800 font-bold">{battingType}</p>
+            <p className="text-gray-600">{bowlingType}</p>
           </div>
         </div>
 
         {/* Price and Button */}
-        <div className="mt-4 flex justify-between items-center mt-1">
+        <div className="mt-4 md:flex justify-between items-center gap-2">
           <p className="text-gray-600 font-semibold">
             Price: <span className="text-black font-bold">{biddingPrice}</span>
           </p>
