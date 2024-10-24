@@ -45,6 +45,10 @@ function App() {
 
   }
 
+  let handleAddMoreBtn=()=>{
+    setToggle(true)
+  }
+
 
 
   let handleCoin=()=>{
@@ -62,7 +66,7 @@ function App() {
      <div className='max-w-full mx-auto'>
      <Nav coin={coin}></Nav>
      <Banner handleCoin={handleCoin}></Banner>
-     <Menu handleAvailableBtn={handleAvailableBtn}handleSelectedBtn={handleSelectedBtn}toggle={toggle}handleChoosePlayer={handleChoosePlayer}takaData={takaData}></Menu>
+     <Menu handleAvailableBtn={handleAvailableBtn}handleSelectedBtn={handleSelectedBtn}toggle={toggle}handleChoosePlayer={handleChoosePlayer}takaData={takaData} handleAddMoreBtn={handleAddMoreBtn}></Menu>
      <Footer></Footer>
 
      </div>

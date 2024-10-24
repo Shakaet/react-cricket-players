@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { MdDelete } from "react-icons/md";
+import Blogs from './Blogs';
 
-const Selected = ({takaData}) => {
+const Selected = ({takaData,handleAddMoreBtn,toggle}) => {
 
     
 
@@ -50,7 +51,11 @@ const Selected = ({takaData}) => {
                 ))
                 }
 
-<button className="btn btn-outline bg-warning text-black mt-5 ms-2">Add More Player</button>
+<button onClick={()=>handleAddMoreBtn()} className="btn btn-outline bg-warning text-black mt-5 ms-2">Add More Player</button>
+
+{
+   toggle && <Blogs></Blogs>
+}
             
         </div>
     );
