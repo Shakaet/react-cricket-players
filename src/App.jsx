@@ -53,6 +53,7 @@ function App() {
     <>
       <div>
         <div className='max-w-full mx-auto'>
+
           <Nav coin={coin}></Nav>
           <Banner handleCoin={handleCoin}></Banner>
           <Menu 

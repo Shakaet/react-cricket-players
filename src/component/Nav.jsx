@@ -8,7 +8,7 @@ import { FaCoins } from "react-icons/fa6";
 
 const Nav = ({coin}) => {
     return (
-        <div>
+        <div className='sticky top-0 z-30'>
             <div className="navbar bg-base-100">
                 <div className="flex-1">
                     <img src={picture}></img>
