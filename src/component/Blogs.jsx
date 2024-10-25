@@ -2,35 +2,29 @@ import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import Blog from './Blog';
 
-const Blogs = ({handleChoosePlayer}) => {
+const Blogs = ({ handleChoosePlayer }) => {
+    const [data, setData] = useState([]);
 
-    let [data,setData]=useState([])
-
-
-    useEffect(()=>{
+    useEffect(() => {
         fetch("data.json")
-        .then(res=>res.json())
-        .then(data=>setData(data))
-    },[])
+            .then(res => res.json())
+            .then(data => setData(data));
+    }, []);
 
-    
     return (
-        <div>
-
-           <h1 className='text-3xl text-[#131313] font-bold'>Available Players</h1>
-
-            <div className='grid grid-cols-2 gap-5 md:grid-cols-3 justify-center mt-5'>
-            {
-                data.map(item=><Blog data={item} handleChoosePlayer={handleChoosePlayer}></Blog>)
-            }
+        <div className="container mx-auto px-4">
+            <h1 className="text-3xl text-[#131313] font-bold mb-8 text-center">Available Players</h1>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                {data.map(item => (
+                    <Blog key={item.playerId} data={item} handleChoosePlayer={handleChoosePlayer} />
+                ))}
             </div>
-            
         </div>
     );
 };
 
 Blogs.propTypes = {
-    
+    handleChoosePlayer: PropTypes.func.isRequired,
 };
 
 export default Blogs;

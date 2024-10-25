@@ -3,12 +3,11 @@ import './App.css'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import Banner from './component/Banner'
-import Nav from './component/nav'
-import Menu from './component/menu'
-import Footer from './component/footer'
+import Nav from './component/Nav'
+import Menu from './component/Menu'
+import Footer from './component/Footer'
 
 function App() {
-
   let [coin, setCoin] = useState(0)
   let [toggle, setToggle] = useState(true)
   let [takaData, settakeData] = useState([])
@@ -52,10 +51,10 @@ function App() {
   return (
     <>
       <div>
-        <div className='max-w-full mx-auto'>
+        <div className='max-w-full mx-auto overflow-x-hidden'>
 
-          <Nav coin={coin}></Nav>
-          <Banner handleCoin={handleCoin}></Banner>
+          <Nav coin={coin} />
+          <Banner handleCoin={handleCoin} />
           <Menu 
             handleAvailableBtn={handleAvailableBtn}
             handleSelectedBtn={handleSelectedBtn}
@@ -64,11 +63,10 @@ function App() {
             takaData={takaData}
             handleAddMoreBtn={handleAddMoreBtn}
             handleDelete={handleDelete}
-          ></Menu>
-          <Footer></Footer>
+          />
+          <Footer />
         </div>
 
-        {/* Toast Container */}
         <ToastContainer />
       </div>
     </>
