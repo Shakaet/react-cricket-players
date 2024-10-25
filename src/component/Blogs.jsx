@@ -13,7 +13,7 @@ const Blogs = ({ handleChoosePlayer }) => {
 
     return (
         <div className="container mx-auto px-4">
-            <h1 className="text-3xl text-[#131313] font-bold mb-8 text-center">Available Players</h1>
+            <h1 className="text-3xl text-[#131313] font-bold mb-8">Available Players</h1>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {data.map(item => (
                     <Blog key={item.playerId} data={item} handleChoosePlayer={handleChoosePlayer} />
